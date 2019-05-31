@@ -28,4 +28,4 @@ python  manage.py  runserver
                      urlpatterns = [
 						    path('index', include('应用名.urls')),
 						]
-#  4、添加应用：'应用名 .apps.首字母大写的应用名Config',
+#  4、添加应用settings.py里找到INSTALLED_APPS数组：'应用名 .apps.首字母大写的应用名Config',

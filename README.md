@@ -14,7 +14,7 @@ python  manage.py  runserver
 #     1》、引入包文件：from django.http import HttpResponse
 #     2》、定义视图文件：
                   def  方法名 (requerst):
-#                      return HttpResponse('内容')
+                      return HttpResponse('内容')
 #  2、在应用目录下注册路由文件urls.py，写入引入的试图、路由
 #     1》、引入包文件：from django.urls import path, include
 #     2》、引入views.py视图文件：import h5.views

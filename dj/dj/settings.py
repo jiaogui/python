@@ -37,6 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    # 自定义的应用
+    'h5.apps.H5Config',
 ]
 
 MIDDLEWARE = [

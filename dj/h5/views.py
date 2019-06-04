@@ -5,4 +5,7 @@ from django.http import HttpResponse
 # Create your views here.
 
 def index(request):
-    return HttpResponse("Hello, world. <span style='color:red'>You're at the polls index.</span>")
+	context = {}
+	context['index'] = "Hello, world. You're at the polls index."
+    # return HttpResponse(context['index'])
+	return render(request , 'index.html' , context)

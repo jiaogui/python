@@ -100,3 +100,8 @@ python  manage.py  runserver
 # 4、找到python目录下E:\Python\Lib\site-packages\django\db\backends\mysql的operation.py文件，修改
     query = query.decode(errors='replace')修改成query = query.encode(errors='replace')
 
+
+# sqlite3数据库创建用户
+#  1、生成迁移表：python manage.py migrate
+#  2、创建用户：python  manage.py  createsuperuser  根据提示输出结果
+

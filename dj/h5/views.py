@@ -1,3 +1,4 @@
+# _*_coding:utf-8_*_
 from django.shortcuts import render
 
 from django.http import HttpResponse
@@ -5,7 +6,7 @@ from django.http import HttpResponse
 # Create your views here.
 
 def index(request):
-	context = {}
-	context['index'] = "Hello, world. You're at the polls index."
-    # return HttpResponse(context['index'])
-	return render(request , 'index.html' , context)
+	return render(request , 'index.html')
+
+def indexCreate(request):
+	return HttpResponse(request.POST.get('username'))

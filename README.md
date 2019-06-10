@@ -108,6 +108,5 @@ python  manage.py  runserver
 
 # 接值格式：request.POST.get('username')  /  request.POST['username']
 
-# ````````````````
 # --------
 # /////////////

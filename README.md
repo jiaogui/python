@@ -101,7 +101,11 @@ python  manage.py  runserver
     query = query.decode(errors='replace')修改成query = query.encode(errors='replace')
 
 
-# sqlite3数据库创建用户
+# sqlite3或者mysql数据库创建用户
 #  1、生成迁移表：python manage.py migrate
 #  2、创建用户：python  manage.py  createsuperuser  根据提示输出结果
+
+
+# 接值格式：request.POST.get('username')  /  request.POST['username']
+
 

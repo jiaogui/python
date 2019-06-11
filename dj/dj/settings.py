@@ -61,7 +61,7 @@ TEMPLATES = [
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         # html界面
         'DIRS': [
-            BASE_DIR+"/templates",
+            BASE_DIR+"/h5/templates",
         ],
         'APP_DIRS': True,
         'OPTIONS': {

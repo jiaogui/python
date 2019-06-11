@@ -108,5 +108,19 @@ python  manage.py  runserver
 
 # 接值格式：request.POST.get('username')  /  request.POST['username']
 
-# --------
-# ///
+
+# django2.2需要打开安装目录，找到django/views/debug.py的311行
+# 使用：with Path(CURRENT_DIR, 'templates', 'technical_500.html').open(encoding="utf-8") as fh:
+# 注释：with Path(CURRENT_DIR, 'templates', 'technical_500.html').open() as fh:
+
+# 添加数据库：应用下的models.py新增class类：,对应的表名就是    应用名_类名，对应字段···案例：
+	class user(models.Model):
+		name = models.CharField( max_length=20)
+		token = models.CharField( max_length=20)
+		createTime = models.CharField( max_length=20)
+
+
+# views.py添加数据：
+#  1、引入应用下的models.py：from h5 import models
+#  2、添加数据：models.user.objects.create(name='name', token='token', createTime='1234567890').save()
+

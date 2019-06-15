@@ -42,6 +42,8 @@ INSTALLED_APPS = [
 
     # 自定义的应用
     'h5.apps.H5Config',
+    # 样式
+    'bootstrap3',
 ]
 
 MIDDLEWARE = [
@@ -52,6 +54,9 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+
+    # 自定义中间件
+    'h5.middleware.loginMiddleware.LoginMiddleware',
 ]
 
 ROOT_URLCONF = 'dj.urls'
@@ -133,4 +138,8 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_URL = '/h5/static/'
+
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, "h5/static/12345678/"),
+)

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    {% load bootstrap3 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+    {% bootstrap_messages %}
+    <link href="https://v3.bootcss.com/examples/signin/signin.css" rel="stylesheet">
+  </head>
+  <body>
+	<div class="container" style="margin-top: 10%">
+      <form class="form-signin" action="loginPy" method="post">
+        <center><h2 class="form-signin-heading">用户登录</h2></center>
+        <label for="inputUsername" class="sr-only">账号</label>
+        <input type="text" id="inputUsername" name="username" class="form-control" placeholder="账号" required autofocus>
+        <label for="inputPassword" class="sr-only">密码</label>
+        <input type="password" id="inputPassword" name="password" class="form-control" placeholder="密码" required>
+        <button class="btn btn-lg btn-primary btn-block" type="submit" id="btn">登录</button>
+        <br>
+        <span style="color: red">{{ message }}</span>
+        {% csrf_token %}
+      </form>
+    </div>
+  </body>
+</html>

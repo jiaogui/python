@@ -23,8 +23,8 @@
 			<td class="warning">{{ value.token }}</td>
 			<td class="danger">{{ value.createTime }}</td>
 			<td class="info">
-				<button type="button" class="btn btn-info">编辑</button>
-				<button type="button" class="btn btn-danger">删除</button>
+				<a type="button" href="userUp?id={{ value.id }}" class="btn btn-info">编辑</a>
+				<a type="button" href="userDel?id={{ value.id }}" class="btn btn-danger">删除</a>
 			</td>
 		</tr>
 		{% endfor %}

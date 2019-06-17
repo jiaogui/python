@@ -17,6 +17,7 @@ def loginPy(request):
 		response = HttpResponseRedirect(reverse("html5:index"))
 		md5 = hashlib.md5()
 		md5.update((token+name).encode())
+		# 存储cookie
 		response.set_cookie('token',md5.hexdigest())
 		response.set_cookie('username',name)
 		# 后台首页
